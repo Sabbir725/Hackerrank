@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void changer(int &a,int &b) {
+     
+    int olda=a;
+    a=a+b;
+    if(olda>b){
+        b=olda-b;
+    }   
+    else{
+        b=b-olda;
+    }
+}
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+   int *apointer=&a;
+     int *bpointer=&b;
+     changer(a,b);
+     cout<<a<<"\n"<<b;
+    return 0;
